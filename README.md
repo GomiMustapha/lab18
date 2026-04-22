@@ -29,20 +29,6 @@ frida-ps -U
 
 ---
 
-## 🔍 Étape 2 : Vérification des processus avec Frida
-
-Liste des applications en cours d’exécution pour identifier notre cible :
-
-```bash
-frida-ps -U
-```
-
-<p align="center">
-  <img src="images/step2_frida_ps.png" width="700"/>
-</p>
-
----
-
 ## 🧠 Étape 3 : Analyse du code avec JADX
 
 Décompilation de l’application pour comprendre la logique interne.
