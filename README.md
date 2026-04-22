@@ -29,19 +29,19 @@ frida-ps -U
 
 ---
 
-## 🧠 Étape 3 : Analyse du code avec JADX
+## 🧠 Étape 2 : Analyse du code avec JADX
 
 Décompilation de l’application pour comprendre la logique interne.
 
 On identifie une fonction responsable de la génération du mot de passe dans `MainActivity`.
 
 <p align="center">
-  <img src="images/step3_jadx_analysis.png" width="700"/>
+  <img src="images/2.png" width="700"/>
 </p>
 
 ---
 
-## 📂 Étape 4 : Analyse du fichier strings.xml
+## 📂 Étape 3 : Analyse du fichier strings.xml
 
 Inspection des ressources pour trouver des informations sensibles :
 
@@ -50,12 +50,12 @@ Inspection des ressources pour trouver des informations sensibles :
 * URL de la base de données
 
 <p align="center">
-  <img src="images/step4_strings_xml.png" width="700"/>
+  <img src="images/3.png" width="700"/>
 </p>
 
 ---
 
-## ⚡ Étape 5 : Injection avec Frida
+## ⚡ Étape 4 : Injection avec Frida
 
 Utilisation d’un script Frida pour intercepter et exécuter dynamiquement la fonction de génération du mot de passe :
 
@@ -64,27 +64,17 @@ frida -U -f com.pwnsec.firestorm -l frida_firestorm.js
 ```
 
 <p align="center">
-  <img src="images/step5_frida_script.png" width="700"/>
+  <img src="images/4.png" width="700"/>
 </p>
 
 ---
 
-## 🔑 Étape 6 : Génération du mot de passe
-
-Le script permet de récupérer dynamiquement le mot de passe Firebase :
-
-<p align="center">
-  <img src="images/step6_password_generated.png" width="700"/>
-</p>
-
----
-
-## 🚨 Étape 7 : Récupération du flag
+## 🚨 Étape 5 : Récupération du flag
 
 Connexion réussie et récupération du flag final :
 
 <p align="center">
-  <img src="images/step7_flag.png" width="700"/>
+  <img src="images/5.png" width="700"/>
 </p>
 
 ---
@@ -108,17 +98,4 @@ Ce lab démontre l’importance de :
 
 ---
 
-## 🔒 Recommandations
 
-* Utiliser l’obfuscation (ProGuard / R8)
-* Stocker les secrets côté serveur uniquement
-* Implémenter des mécanismes anti-Frida
-* Vérifier l’intégrité de l’application
-
----
-
-## 👨‍💻 Auteur
-
-**Gomi Mustapha**
-
----
